@@ -1,0 +1,5 @@
+<mass value="1.80"/>
+<inertia ixx="0.00415" ixy="0" ixz="0" iyy="0.00415" iyz="0" izz="0.0083"/>
+<maxForce>67.10</maxForce>
+<maxXYTorque>4.02</maxXYTorque>
+<maxZTorque>0.402</maxZTorque>
