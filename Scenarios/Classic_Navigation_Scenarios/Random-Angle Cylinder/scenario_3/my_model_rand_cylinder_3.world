@@ -1,0 +1,1022 @@
+
+            <sdf version='1.7'>
+            <world name='default'>
+                <light name='sun' type='directional'>
+                <cast_shadows>1</cast_shadows>
+                <pose>0 0 10 0 -0 0</pose>
+                <diffuse>0.8 0.8 0.8 1</diffuse>
+                <specular>0.2 0.2 0.2 1</specular>
+                <attenuation>
+                    <range>1000</range>
+                    <constant>0.9</constant>
+                    <linear>0.01</linear>
+                    <quadratic>0.001</quadratic>
+                </attenuation>
+                <direction>-0.5 0.1 -0.9</direction>
+                <spot>
+                    <inner_angle>0</inner_angle>
+                    <outer_angle>0</outer_angle>
+                    <falloff>0</falloff>
+                </spot>
+                </light>
+                <model name='ground_plane'>
+                <static>1</static>
+                <link name='link'>
+                    <collision name='collision'>
+                    <geometry>
+                        <plane>
+                        <normal>0 0 1</normal>
+                        <size>100 100</size>
+                        </plane>
+                    </geometry>
+                    <surface>
+                        <contact>
+                        <collide_bitmask>65535</collide_bitmask>
+                        <ode/>
+                        </contact>
+                        <friction>
+                        <ode>
+                            <mu>100</mu>
+                            <mu2>50</mu2>
+                        </ode>
+                        <torsional>
+                            <ode/>
+                        </torsional>
+                        </friction>
+                        <bounce/>
+                    </surface>
+                    <max_contacts>10</max_contacts>
+                    </collision>
+                    <visual name='visual'>
+                    <cast_shadows>0</cast_shadows>
+                    <geometry>
+                        <plane>
+                        <normal>0 0 1</normal>
+                        <size>100 100</size>
+                        </plane>
+                    </geometry>
+                    <material>
+                        <script>
+                        <uri>file://media/materials/scripts/gazebo.material</uri>
+                        <name>Gazebo/Grey</name>
+                        </script>
+                    </material>
+                    </visual>
+                    <self_collide>0</self_collide>
+                    <enable_wind>0</enable_wind>
+                    <kinematic>0</kinematic>
+                </link>
+                </model>
+                <gravity>0 0 -9.8</gravity>
+                <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+                <atmosphere type='adiabatic'/>
+                <physics type='ode'>
+                <max_step_size>0.001</max_step_size>
+                <real_time_factor>1</real_time_factor>
+                <real_time_update_rate>1000</real_time_update_rate>
+                </physics>
+                <scene>
+                <ambient>0.4 0.4 0.4 1</ambient>
+                <background>0.7 0.7 0.7 1</background>
+                <shadows>1</shadows>
+                </scene>
+                <wind/>
+                <spherical_coordinates>
+                <surface_model>EARTH_WGS84</surface_model>
+                <latitude_deg>0</latitude_deg>
+                <longitude_deg>0</longitude_deg>
+                <elevation>0</elevation>
+                <heading_deg>0</heading_deg>
+                </spherical_coordinates>
+                <model name='cylinder_1'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>0 0 0.1 0 -0 0</pose>
+        <collision name='collision_trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.7234155027060548</radius>
+              <length>12.953335484031278</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name='trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.7234155027060548</radius>
+              <length>12.953335484031278</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://tree_simple/scripts</uri>
+              <uri>model://tree_simple/materials/textures</uri>
+              <name>TreeSimple/Trunk</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>21.00890569150392 -3.8540450441753507 -2.452748434934044 179.40193449676843 6.713390166745805 145.38399994907243</pose>
+    </model>
+    <model name='cylinder_2'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>0 0 0.1 0 -0 0</pose>
+        <collision name='collision_trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.5463211008207626</radius>
+          <length>19.72344125594885</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name='trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.5463211008207626</radius>
+          <length>19.72344125594885</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://tree_simple/scripts</uri>
+              <uri>model://tree_simple/materials/textures</uri>
+              <name>TreeSimple/Trunk</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>22.260879774332498 19.228296512568527 4.426406007162969 82.50864635077552 112.84905633284316 39.36330759619164</pose>
+    </model>
+    <model name='cylinder_3'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>0 0 0.1 0 -0 0</pose>
+        <collision name='collision_trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.8548372484809255</radius>
+          <length>13.836714031263158</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name='trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.8548372484809255</radius>
+          <length>13.836714031263158</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://tree_simple/scripts</uri>
+              <uri>model://tree_simple/materials/textures</uri>
+              <name>TreeSimple/Trunk</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>36.64250599308923 5.46268080152149 -0.3139700257588771 10.530556120593776 168.09509218434886 62.689839005031466</pose>
+    </model>
+    <model name='cylinder_4'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>0 0 0.1 0 -0 0</pose>
+        <collision name='collision_trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.8372644615964391</radius>
+          <length>10.660292069473956</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name='trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.8372644615964391</radius>
+          <length>10.660292069473956</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://tree_simple/scripts</uri>
+              <uri>model://tree_simple/materials/textures</uri>
+              <name>TreeSimple/Trunk</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>12.147911141525556 7.806554635595035 5.887780755355497 1.3665843606842576 140.27885040185998 177.78907209854697</pose>
+    </model>
+    <model name='cylinder_5'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>0 0 0.1 0 -0 0</pose>
+        <collision name='collision_trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.8136404943272095</radius>
+          <length>13.717900842669058</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name='trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.8136404943272095</radius>
+          <length>13.717900842669058</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://tree_simple/scripts</uri>
+              <uri>model://tree_simple/materials/textures</uri>
+              <name>TreeSimple/Trunk</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>29.17679377202698 10.214248319443463 5.626295740561044 95.35639657603629 75.56297226275164 148.007070265567</pose>
+    </model>
+    <model name='cylinder_6'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>0 0 0.1 0 -0 0</pose>
+        <collision name='collision_trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.5740356762607992</radius>
+          <length>17.074315162700493</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name='trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.5740356762607992</radius>
+          <length>17.074315162700493</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://tree_simple/scripts</uri>
+              <uri>model://tree_simple/materials/textures</uri>
+              <name>TreeSimple/Trunk</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>19.55518000020775 1.6406785002902282 2.73616901973152 24.67764018920356 88.9408962370074 140.25625328804824</pose>
+    </model>
+    <model name='cylinder_7'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>0 0 0.1 0 -0 0</pose>
+        <collision name='collision_trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.9837575898541788</radius>
+          <length>11.848767915918737</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name='trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.9837575898541788</radius>
+          <length>11.848767915918737</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://tree_simple/scripts</uri>
+              <uri>model://tree_simple/materials/textures</uri>
+              <name>TreeSimple/Trunk</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>59.49698375650257 -7.828150063693542 1.4451402822248314 122.72206881245975 155.31437152318972 94.4577532181646</pose>
+    </model>
+    <model name='cylinder_8'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>0 0 0.1 0 -0 0</pose>
+        <collision name='collision_trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.5554700841788502</radius>
+          <length>17.4701878345913</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name='trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.5554700841788502</radius>
+          <length>17.4701878345913</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://tree_simple/scripts</uri>
+              <uri>model://tree_simple/materials/textures</uri>
+              <name>TreeSimple/Trunk</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>23.561995869229783 -8.262091291026582 0.20650865820312703 157.24008711166493 103.4524652341211 91.54772643628786</pose>
+    </model>
+    <model name='cylinder_9'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>0 0 0.1 0 -0 0</pose>
+        <collision name='collision_trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.9188122893514199</radius>
+          <length>18.39236461387587</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name='trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.9188122893514199</radius>
+          <length>18.39236461387587</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://tree_simple/scripts</uri>
+              <uri>model://tree_simple/materials/textures</uri>
+              <name>TreeSimple/Trunk</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>52.76856698292442 0.6914563560302724 2.0725907446487923 30.30159236913555 66.44669422694471 150.3458502322632</pose>
+    </model>
+    <model name='cylinder_10'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>0 0 0.1 0 -0 0</pose>
+        <collision name='collision_trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.5143967297363823</radius>
+          <length>7.49103626970534</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name='trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.5143967297363823</radius>
+          <length>7.49103626970534</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://tree_simple/scripts</uri>
+              <uri>model://tree_simple/materials/textures</uri>
+              <name>TreeSimple/Trunk</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>36.791145000375245 -13.519492359314329 1.1717389268772642 37.68061656104173 134.68648929647705 37.91556403053179</pose>
+    </model>
+    <model name='cylinder_11'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>0 0 0.1 0 -0 0</pose>
+        <collision name='collision_trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.9341561928620075</radius>
+          <length>7.1965019870656715</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name='trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.9341561928620075</radius>
+          <length>7.1965019870656715</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://tree_simple/scripts</uri>
+              <uri>model://tree_simple/materials/textures</uri>
+              <name>TreeSimple/Trunk</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>11.822282738295794 11.677256509005613 -4.901461953933006 11.45374547860152 81.1860040803771 0.23128169209278626</pose>
+    </model>
+        <model name='cylinder_12'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>0 0 0.1 0 -0 0</pose>
+        <collision name='collision_trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.9346051750616886</radius>
+          <length>16.987459908296117</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name='trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.9346051750616886</radius>
+          <length>16.987459908296117</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://tree_simple/scripts</uri>
+              <uri>model://tree_simple/materials/textures</uri>
+              <name>TreeSimple/Trunk</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>18.124600155564007 15.626248368997267 1.5725274537402054 105.66614568244384 63.435750010407006 155.956871140757</pose>
+    </model>
+    <model name='cylinder_13'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>0 0 0.1 0 -0 0</pose>
+        <collision name='collision_trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.5887399395130926</radius>
+          <length>15.923410700129274</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name='trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.5887399395130926</radius>
+          <length>15.923410700129274</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://tree_simple/scripts</uri>
+              <uri>model://tree_simple/materials/textures</uri>
+              <name>TreeSimple/Trunk</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>15.328521387803855 -7.524950430584848 -2.865817952151349 128.8016254062932 17.808324112637624 101.41964194315048</pose>
+    </model>
+    <model name='cylinder_14'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>0 0 0.1 0 -0 0</pose>
+        <collision name='collision_trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.9634321185642489</radius>
+          <length>12.372575877917324</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name='trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.9634321185642489</radius>
+          <length>12.372575877917324</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://tree_simple/scripts</uri>
+              <uri>model://tree_simple/materials/textures</uri>
+              <name>TreeSimple/Trunk</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>40.507344407221964 -11.790703241551928 -1.9474148703616794 122.04498629502265 39.2436026677681 67.04755523141449</pose>
+    </model>
+    <model name='cylinder_15'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>0 0 0.1 0 -0 0</pose>
+        <collision name='collision_trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.9347863815026418</radius>
+          <length>14.522412315882603</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name='trunk'>
+          <pose frame=''>0 0 2 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.9347863815026418</radius>
+          <length>14.522412315882603</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://tree_simple/scripts</uri>
+              <uri>model://tree_simple/materials/textures</uri>
+              <name>TreeSimple/Trunk</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>21.714453053728786 -8.446535591358245 -2.0182236539156895 140.74613693226587 56.886213009138714 31.85305437194457</pose>
+    </model>
+    <model name='cylinder_26'>
+  <static>1</static>
+  <link name='link'>
+    <pose frame=''>0 0 0.1 0 -0 0</pose>
+    <collision name='collision_trunk'>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.8082614125</radius>
+          <length>5.7527804043</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='trunk'>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.8082614125</radius>
+          <length>5.7527804043</length>
+        </cylinder>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://tree_simple/scripts</uri>
+          <uri>model://tree_simple/materials/textures</uri>
+          <name>TreeSimple/Trunk</name>
+        </script>
+      </material>
+    </visual>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+  </link>
+  <pose frame=''>45.5922126692 5.1973296119 9.3598508087 228.8782799465 261.4639619685 31.6188489367</pose>
+</model>
+
+<model name='cylinder_27'>
+  <static>1</static>
+  <link name='link'>
+    <pose frame=''>0 0 0.1 0 -0 0</pose>
+    <collision name='collision_trunk'>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.5938813088</radius>
+          <length>12.4257553003</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='trunk'>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.5938813088</radius>
+          <length>12.4257553003</length>
+        </cylinder>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://tree_simple/scripts</uri>
+          <uri>model://tree_simple/materials/textures</uri>
+          <name>TreeSimple/Trunk</name>
+        </script>
+      </material>
+    </visual>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+  </link>
+  <pose frame=''>11.1143236876 -15.4972969867 0.2875334377 2.5885441338 259.4627330534 56.5652363604</pose>
+</model>
+
+<model name='cylinder_28'>
+  <static>1</static>
+  <link name='link'>
+    <pose frame=''>0 0 0.1 0 -0 0</pose>
+    <collision name='collision_trunk'>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.8198904509</radius>
+          <length>13.3279643301</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='trunk'>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.8198904509</radius>
+          <length>13.3279643301</length>
+        </cylinder>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://tree_simple/scripts</uri>
+          <uri>model://tree_simple/materials/textures</uri>
+          <name>TreeSimple/Trunk</name>
+        </script>
+      </material>
+    </visual>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+  </link>
+  <pose frame=''>56.5566045684 -9.8208134591 5.6745506238 246.0928018572 203.1900472109 148.5765754322</pose>
+</model>
+
+<model name='cylinder_29'>
+  <static>1</static>
+  <link name='link'>
+    <pose frame=''>0 0 0.1 0 -0 0</pose>
+    <collision name='collision_trunk'>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.7426379481</radius>
+          <length>11.2525352981</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='trunk'>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.7426379481</radius>
+          <length>11.2525352981</length>
+        </cylinder>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://tree_simple/scripts</uri>
+          <uri>model://tree_simple/materials/textures</uri>
+          <name>TreeSimple/Trunk</name>
+        </script>
+      </material>
+    </visual>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+  </link>
+  <pose frame=''>23.0125127207 18.4869310199 -0.1416712246 339.111561029 312.4343096709 341.8397243233</pose>
+</model>
+
+<model name='cylinder_30'>
+  <static>1</static>
+  <link name='link'>
+    <pose frame=''>0 0 0.1 0 -0 0</pose>
+    <collision name='collision_trunk'>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.6468525641</radius>
+          <length>10.807517157</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='trunk'>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.6468525641</radius>
+          <length>10.807517157</length>
+        </cylinder>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://tree_simple/scripts</uri>
+          <uri>model://tree_simple/materials/textures</uri>
+          <name>TreeSimple/Trunk</name>
+        </script>
+      </material>
+    </visual>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+  </link>
+  <pose frame=''>7.6304654041 -4.0423171289 5.2238907384 62.6113473487 300.9244869567 213.1703035341</pose>
+</model>
+
+<model name='cylinder_31'>
+  <static>1</static>
+  <link name='link'>
+    <pose frame=''>0 0 0.1 0 -0 0</pose>
+    <collision name='collision_trunk'>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.6527792243</radius>
+          <length>18.4145687807</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='trunk'>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.6527792243</radius>
+          <length>18.4145687807</length>
+        </cylinder>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://tree_simple/scripts</uri>
+          <uri>model://tree_simple/materials/textures</uri>
+          <name>TreeSimple/Trunk</name>
+        </script>
+      </material>
+    </visual>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+  </link>
+  <pose frame=''>51.3119872125 12.8458531123 3.6545190977 236.9893289474 221.7061315814 102.94980269</pose>
+</model>
+
+<model name='cylinder_32'>
+  <static>1</static>
+  <link name='link'>
+    <pose frame=''>0 0 0.1 0 -0 0</pose>
+    <collision name='collision_trunk'>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.6010447712</radius>
+          <length>15.4716395753</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='trunk'>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.6010447712</radius>
+          <length>15.4716395753</length>
+        </cylinder>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://tree_simple/scripts</uri>
+          <uri>model://tree_simple/materials/textures</uri>
+          <name>TreeSimple/Trunk</name>
+        </script>
+      </material>
+    </visual>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+  </link>
+  <pose frame=''>18.6538757857 -10.1752292959 6.642277517 265.1058216015 288.8457828541 104.1294791462</pose>
+</model>
+
+<model name='cylinder_33'>
+  <static>1</static>
+  <link name='link'>
+    <pose frame=''>0 0 0.1 0 -0 0</pose>
+    <collision name='collision_trunk'>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.8816583188</radius>
+          <length>16.3183505384</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='trunk'>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.8816583188</radius>
+          <length>16.3183505384</length>
+        </cylinder>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://tree_simple/scripts</uri>
+          <uri>model://tree_simple/materials/textures</uri>
+          <name>TreeSimple/Trunk</name>
+        </script>
+      </material>
+    </visual>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+  </link>
+  <pose frame=''>6.2348462043 -12.517338013 2.8131722738 156.9265308878 309.4920473595 254.0402169491</pose>
+</model>
+
+<model name='cylinder_34'>
+  <static>1</static>
+  <link name='link'>
+    <pose frame=''>0 0 0.1 0 -0 0</pose>
+    <collision name='collision_trunk'>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.7943056191</radius>
+          <length>16.3655759338</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='trunk'>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.7943056191</radius>
+          <length>16.3655759338</length>
+        </cylinder>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://tree_simple/scripts</uri>
+          <uri>model://tree_simple/materials/textures</uri>
+          <name>TreeSimple/Trunk</name>
+        </script>
+      </material>
+    </visual>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+  </link>
+  <pose frame=''>19.0831403568 -3.9042172432 -1.9487327465 277.0996944252 297.5794978816 56.4913290796</pose>
+</model>
+
+<model name='cylinder_35'>
+  <static>1</static>
+  <link name='link'>
+    <pose frame=''>0 0 0.1 0 -0 0</pose>
+    <collision name='collision_trunk'>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.6170198442</radius>
+          <length>5.7857712393</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='trunk'>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.6170198442</radius>
+          <length>5.7857712393</length>
+        </cylinder>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://tree_simple/scripts</uri>
+          <uri>model://tree_simple/materials/textures</uri>
+          <name>TreeSimple/Trunk</name>
+        </script>
+      </material>
+    </visual>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+  </link>
+  <pose frame=''>22.7334619388 18.3121723177 -1.1966649078 162.8099609332 227.2697672236 101.4853173526</pose>
+</model>
+
+<model name='cylinder_36'>
+  <static>1</static>
+  <link name='link'>
+    <pose frame=''>0 0 0.1 0 -0 0</pose>
+    <collision name='collision_trunk'>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.8458606154</radius>
+          <length>19.1683017687</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='trunk'>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.8458606154</radius>
+          <length>19.1683017687</length>
+        </cylinder>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://tree_simple/scripts</uri>
+          <uri>model://tree_simple/materials/textures</uri>
+          <name>TreeSimple/Trunk</name>
+        </script>
+      </material>
+    </visual>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+  </link>
+  <pose frame=''>14.2608169896 -10.8143584382 -0.512158446 4.5226123165 197.644534632 356.8137705417</pose>
+</model>
+
+<model name='cylinder_37'>
+  <static>1</static>
+  <link name='link'>
+    <pose frame=''>0 0 0.1 0 -0 0</pose>
+    <collision name='collision_trunk'>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.8060231778</radius>
+          <length>7.313359608</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='trunk'>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.8060231778</radius>
+          <length>7.313359608</length>
+        </cylinder>
+      </geometry>
+      <material>
+        <script>
+          <uri>model://tree_simple/scripts</uri>
+          <uri>model://tree_simple/materials/textures</uri>
+          <name>TreeSimple/Trunk</name>
+        </script>
+      </material>
+    </visual>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+  </link>
+  <pose frame=''>2.0248571705 8.5827244391 2.1356723641 297.2677360107 150.7585376813 46.7560347797</pose>
+</model>
+            </world>
+            </sdf>
+            
